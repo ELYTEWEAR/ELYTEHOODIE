@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Your Hoodie</title>
+</head>
+<body>
+    <h1>Register Your Hoodie</h1>
+    <div id="registrationStatus"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const hoodieId = params.get('hoodieId');
+
+            if (hoodieId) {
+                document.getElementById('registrationStatus').innerText = `Registering hoodie with ID: ${hoodieId}`;
+                // Implement your registration logic here
+            } else {
+                document.getElementById('registrationStatus').innerText = 'Hoodie ID not found.';
+            }
+        });
+    </script>
+</body>
+</html>
